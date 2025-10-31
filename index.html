@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Modern, fully-styled sample website: hero, features, portfolio, contact, theme toggle." />
+  <title>Stellar — Modern Sample Website</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23344CB8'/%3E%3Ctext x='50' y='57' font-family='Inter,Segoe UI,Arial' font-size='48' fill='white' text-anchor='middle' font-weight='700'%3E★%3C/text%3E%3C/svg%3E">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Stellar — Modern Sample Website">
+  <meta property="og:description" content="A responsive, accessible, fully-styled sample website with theme toggle, portfolio modal, and contact validation.">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='100%25' height='100%25' fill='%235C5CE6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial' font-size='48' fill='white'%3EStellar — Modern Sample Website%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#" aria-label="Go to home">
+          <div class="logo" aria-hidden="true">
+            <!-- SVG logo -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" role="img">
+              <circle cx="12" cy="12" r="10" fill="currentColor" />
+              <path d="M8 12l2.5 2.5L16 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="brand-name">Stellar</span>
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" id="navToggle">
+          <span class="sr-only">Toggle menu</span>
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle color theme">🌓</button>
+        <a class="btn primary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Design • Build • Launch</p>
+          <h1>Beautiful interfaces, engineered for performance.</h1>
+          <p class="lead">We craft delightful, accessible web experiences — fast-loading, responsive, and easy to maintain. Built with modern HTML, CSS, and a sprinkle of JavaScript.</p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="#portfolio">View Work</a>
+            <a class="btn ghost" href="#about">Learn more</a>
+          </div>
+
+          <div class="stats">
+            <div><strong>120+</strong><span>projects</span></div>
+            <div><strong>98%</strong><span>client satis.</span></div>
+            <div><strong>4.9</strong><span>avg rating</span></div>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <!-- Decorative code-ish card -->
+          <div class="device-mockup">
+            <div class="screen">
+              <pre><code class="fake-code">// Example component
+function greet(name) {
+  return `Hello, ${name}!`;
+}</code></pre>
+            </div>
+            <div class="device-shadow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What we do</h2>
+          <p class="muted">Design systems, frontend engineering, accessibility, and performance tuning.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3>Design Systems</h3>
+            <p>Consistent components, tokenized styles, and scalable design language so your product grows cleanly.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Careful resource loading, optimized images, and efficient code for snappy interactions.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">🔒</div>
+            <h3>Accessible</h3>
+            <p>Semantic markup, keyboard navigation, and WCAG-conscious patterns to reach every user.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon">🔧</div>
+            <h3>Engineering</h3>
+            <p>Robust JS patterns, progressive enhancement, and maintainable architecture for long-lived projects.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Selected Work</h2>
+          <p class="muted">Small selection of clean, performant projects. Click any tile for details.</p>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Portfolio items (JS will populate accessible dataset attributes) -->
+          <article class="tile" tabindex="0" data-title="Aurora Dashboard" data-desc="A fast analytics dashboard with custom visualizations and accessible charts." data-tags="React, D3, Accessibility" data-image="">
+            <div class="tile-media aurora"></div>
+            <div class="tile-body">
+              <h3>Aurora Dashboard</h3>
+              <p class="muted">Analytics & visualization</p>
+            </div>
+          </article>
+
+          <article class="tile" tabindex="0" data-title="Breeze Shop" data-desc="E-commerce storefront with micro-interactions and checkout optimizations." data-tags="Shopify, PWA" data-image="">
+            <div class="tile-media breeze"></div>
+            <div class="tile-body">
+              <h3>Breeze Shop</h3>
+              <p class="muted">E-commerce experience</p>
+            </div>
+          </article>
+
+          <article class="tile" tabindex="0" data-title="Orbit Docs" data-desc="Documentation site with contextual search and component playgrounds." data-tags="Docs, DX" data-image="">
+            <div class="tile-media orbit"></div>
+            <div class="tile-body">
+              <h3>Orbit Docs</h3>
+              <p class="muted">Developer docs & tooling</p>
+            </div>
+          </article>
+
+          <article class="tile" tabindex="0" data-title="Lumen Studio" data-desc="Portfolio & booking system for a boutique studio with calendar sync." data-tags="Design, Booking" data-image="">
+            <div class="tile-media lumen"></div>
+            <div class="tile-body">
+              <h3>Lumen Studio</h3>
+              <p class="muted">Creative studio</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <h2>About Stellar</h2>
+          <p>We’re a small team of designers and developers who believe the web can be beautiful, fast, and inclusive. We collaborate with product teams to ship with speed and confidence.</p>
+
+          <ul class="bullets">
+            <li>Human-centered product thinking</li>
+            <li>Fast iteration & prototypes</li>
+            <li>Code reviews & accessible patterns</li>
+          </ul>
+
+          <a class="btn ghost" href="#contact">Work with us</a>
+        </div>
+
+        <div class="about-stats" aria-hidden="true">
+          <div class="stat">
+            <strong>10</strong>
+            <span>team members</span>
+          </div>
+          <div class="stat">
+            <strong>8 yrs</strong>
+            <span>avg experience</span>
+          </div>
+          <div class="stat">
+            <strong>50+</strong>
+            <span>open-source commits</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get in touch</h2>
+          <p class="muted">Tell us about your project — we’ll reply within 1 business day (this is a demo form).</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" id="name" required placeholder="Your name">
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" id="email" required placeholder="you@example.com">
+            </label>
+
+            <label class="full">
+              <span>Message</span>
+              <textarea name="message" id="message" rows="6" required placeholder="Tell us about your project"></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send message</button>
+            <button type="reset" class="btn ghost">Reset</button>
+          </div>
+
+          <div id="formStatus" role="status" aria-live="polite" class="form-status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Stellar</strong>
+        <p class="muted">Design & Frontend Engineering</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social">
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Stellar — All rights reserved.</div>
+  </footer>
+
+  <!-- PORTFOLIO MODAL (hidden) -->
+  <div id="modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" tabindex="-1" data-close="true"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close modal" data-close="true">&times;</button>
+      <div class="modal-content">
+        <div class="modal-media" id="modalMedia" aria-hidden="true"></div>
+        <div class="modal-body">
+          <h3 id="modalTitle">Title</h3>
+          <p id="modalDesc">Description</p>
+          <p class="muted" id="modalTags"></p>
+          <div class="modal-actions">
+            <a class="btn primary" href="#" id="modalView">View case study</a>
+            <button class="btn ghost" data-close="true">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
